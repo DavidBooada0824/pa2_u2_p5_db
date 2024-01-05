@@ -30,13 +30,17 @@ public class Pa2U2P5DbApplication implements CommandLineRunner {
 		// TODO Auto-generated method stub
 
 		Ciudadano ciu = new Ciudadano();
+		
 		ciu.setApellido("Boada");
 		ciu.setNombre("David");
+		
 	this.iCiudadanoService.ingresar(ciu);
+	
 		Empleado emple = new Empleado();
 		emple.setFechaIngreso(LocalDateTime.now());
 		emple.setSalario(new BigDecimal(1200));
 		emple.setCiudadano(ciu);
+		
 	this.iEmpleadoService.ingresar(emple);
 
 	
